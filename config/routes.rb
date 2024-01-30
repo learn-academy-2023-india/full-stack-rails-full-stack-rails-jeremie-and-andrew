@@ -12,6 +12,8 @@ Rails.application.routes.draw do
  
  get '/blogs/:id', to: 'blogs#show', as: 'blog'
 
+ get '/blogs/new', to: 'blogs#new', as: 'new_blog'
+
 
 
 
