@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
  get '/blogs', to: 'blog#index', as: 'blogs'
  
+ get '/blogs/:id', to: 'blogs#show', as: 'blog'
+
 
 
 
