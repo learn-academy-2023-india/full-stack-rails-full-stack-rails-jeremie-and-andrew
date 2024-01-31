@@ -1,8 +1,13 @@
-<h1>Blog Factory</h1>
-    <ul>
-        <% @blogs.each do |blog| %>
-        <li>
-            Blog: <%= blog. %>
-        </li>
-    <% end %>
+<h1>Blog Posts</h1>
+
+<ul>
+  <% @blogs.each do |blog| %>
+    <li>
+      <%= link_to blog.title, blog_path(blog) %>
+      <p><%= blog.content.truncate(100) %></p>
+      <%= link_to 'Delete', blog_path(blog), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
 </ul>
+
+<%= link_to 'New Post', new_blog_path %>
