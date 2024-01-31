@@ -10,16 +10,11 @@ Rails.application.routes.draw do
 
  get '/blogs', to: 'blog#index', as: 'blogs'
  
- get '/blogs/:id', to: 'blogs#show', as: 'blog'
-
  get '/blogs/new', to: 'blogs#new', as: 'new_blog'
 
-
-
-
-
-
-
+ get '/blogs/:id', to: 'blogs#show', as: 'blog'
+ 
+ post 'blogs', to: 'blogs#create'
 
 end
 
